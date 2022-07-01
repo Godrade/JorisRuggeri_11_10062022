@@ -2,10 +2,13 @@ import React from "react";
 import { Banner } from "../../components/Banner";
 import { Collapse } from "../../components/Collapse";
 
+//BANNER IMG
+import BannerIMG from "../../images/apropos.svg";
+
 export const About = () => {
     return (
         <>
-            <Banner url='' />
+            <Banner url={BannerIMG} />
 
             <section class="container-dropdown">
             <Collapse title='Fiabilité' content={<p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>} />
