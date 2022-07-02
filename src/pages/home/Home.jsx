@@ -11,7 +11,7 @@ export const Home = () => {
     return (<section>
         <Banner url={BannerIMG} title="Chez vous, partout et ailleurs" />
 
-        <section class="container-grey">
+        <section className="container-grey">
                 <HousingList housings={data} />
         </section>
     </section>)
