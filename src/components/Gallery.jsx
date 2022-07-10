@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
-import {ReactComponent as ChevronGauche} from '../images/chevronGauche.svg';
-import {ReactComponent as ChevronDroit} from '../images/chevronDroit.svg';
+import {ReactComponent as ArrowLeft} from '../images/chevronGauche.svg';
+import {ReactComponent as ArrowRight} from '../images/chevronDroit.svg';
+
+import { Picture } from "./Picture";
 
 export const Gallery = ({ pictures }) => {
 
@@ -24,14 +26,15 @@ export const Gallery = ({ pictures }) => {
         }
     }
 
+    
     return (
         <section className="gallery">
             
-            <img src={pictures[currentIndex]} alt="" />
+            <Picture url={pictures[currentIndex]} alt="Texte Default" />
 
-            <ChevronGauche className="arrow-left" onClick={handlePreviousClick} style={{display: lastIndexPictures > 1 ? '' : 'none' }} />
-            <ChevronDroit  className="arrow-right" onClick={handleNextClick} style={{display: lastIndexPictures > 1 ? '' : 'none' }} />
-            <span className="picture-counter">{currentIndex}/{lastIndexPictures}</span>
+            <ArrowLeft className="arrow-left" onClick={handlePreviousClick} style={{display: lastIndexPictures > 1 ? '' : 'none' }} />
+            <ArrowRight className="arrow-right" onClick={handleNextClick} style={{display: lastIndexPictures > 1 ? '' : 'none' }} />
+            <span className="picture-counter">{currentIndex + 1}/{lastIndexPictures + 1}</span>
         </section>
     )
 }

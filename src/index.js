@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './responsive.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
@@ -20,14 +21,14 @@ root.render(
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <main>
       <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/housing/:id" element={<Housing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/housing/:id" element={<Housing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </main>
+    <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
