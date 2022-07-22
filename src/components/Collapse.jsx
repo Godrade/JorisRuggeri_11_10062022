@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
-export const Collapse = ({ title, content, width }) => {
+export const Collapse = ({ title, children }) => {
 
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className="dropdown">
-            <div className="dropdown-title">
+        <div className="collapse">
+            <div className="collapse-title">
                 <span>{title}</span>
-                <span className="float-right" onClick={() => setIsOpen(!isOpen)}>{isOpen ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}</span>
+                <span onClick={() => setIsOpen(!isOpen)}>{isOpen ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}</span>
             </div>
-            <div className="dropdown-description" style={{display:isOpen ? '' : 'none'}}>
-                {content}
+            <div className="collapse-description" style={{display:isOpen ? '' : 'none'}}>
+                {children}
             </div>
         </div>
     )

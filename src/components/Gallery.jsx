@@ -32,8 +32,8 @@ export const Gallery = ({ pictures }) => {
             
             <Picture url={pictures[currentIndex]} alt="Texte Default" />
 
-            <ArrowLeft className="arrow-left" onClick={handlePreviousClick} style={{display: lastIndexPictures > 1 ? '' : 'none' }} />
-            <ArrowRight className="arrow-right" onClick={handleNextClick} style={{display: lastIndexPictures > 1 ? '' : 'none' }} />
+            {lastIndexPictures > 1 && <ArrowLeft className="arrow-left" onClick={handlePreviousClick} />}
+            {lastIndexPictures > 1 && <ArrowRight className="arrow-right" onClick={handleNextClick} />}
             <span className="picture-counter">{currentIndex + 1}/{lastIndexPictures + 1}</span>
         </section>
     )

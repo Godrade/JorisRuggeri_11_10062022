@@ -11,7 +11,13 @@
 /*!!!!!!!!!!!!!!!!!!!!*/
 
 @media (max-width: 992px) {
+    .housing-collapse {
+        grid-gap: 10px
+    }
 
+    .housing-title {
+        font-size: 25px;
+    }
 }
 
 /*!!!!!!!!!!!!!!!!!!!!*/
@@ -19,7 +25,7 @@
 @media (max-width: 768px) {
 
     main {
-        padding: 20px 10px 20px 10px;
+        padding: 20px;
     }
 
 
@@ -40,7 +46,31 @@
         font-size: 15px;
     }
 
+    .housing-detail {
+        flex-direction: column;
+    }
 
+    .housing-content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: inherit;
+        margin-bottom: 15px;
+    }
+
+    .housing-collapse {
+        display: block;
+    }
+
+    .rating-content {
+        align-items: center;
+        display: flex;
+    }
+
+
+
+    .container-collapse {
+        padding: 30px;
+    }
 
 
     /* 404 */
@@ -67,6 +97,52 @@
 
     .list-location .item-location {
         flex: 1 1 100%;
+    }
+
+
+    .housing-tag span {
+        font-size: 12px;
+    }
+
+
+    .collapse-description {
+        font-size: 12px;
+    }
+
+    .arrow-left, .arrow-right {
+        height: 20px;
+    }
+
+    .gallery .arrow-left {
+        left: 0;
+    }
+
+    .gallery .arrow-right {
+        right: 0;
+    }
+
+    .rating-content svg {
+        height: 15px;
+    }
+
+    .rating-content {
+        max-width: 100px;
+    }
+
+    .gallery {
+        height: 255px;
+    }
+
+    .collapse {
+        height: 30px;
+    }
+
+    .collapse-title {
+        font-size: 13px;
+    }
+
+    .container-collapse {
+        padding: 10px;
     }
 
     footer {

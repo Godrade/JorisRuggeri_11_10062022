@@ -182,12 +182,12 @@ footer .footer p {
 
 
 
-/* DROPDOWN */
-.container-dropdown {
+/* collapse */
+.container-collapse {
     padding: 60px;
 }
 
-.dropdown {
+.collapse {
     height: 50px;
     background-color: #FF6060;
     border-radius: 5px;
@@ -198,19 +198,25 @@ footer .footer p {
     width: 100%;
 }
 
-.float-right {
-    float: right;
+.collapse-title {
+    display: flex;
+    justify-content: space-between;
 }
 
-.dropdown-title span {
+.collapse-title span {
     display: inline-block;
     margin: 10px;
 }
 
-.dropdown-description {
+.collapse-description {
     background-color: #F6F6F6;
     color: #FF6060;
     padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.collapse-description ul {
+    padding: 0;
 }
 
 
@@ -295,6 +301,9 @@ footer .footer p {
 .host-name {
     font-size: 18px;
     color: #FF6060;
+    align-self: center;
+    margin-right: 10px;
+    text-align: right;
 }
 
 .host-picture {
@@ -309,21 +318,26 @@ footer .footer p {
     width: 100%;
 }
 
-.housing-content {
-    position: absolute !important;
-    right: 0;
-}
-
-.rating-content {
-    position: absolute;
-    right: 0;
-    bottom: 20px;
-}
-
 .housing-collapse {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
+}
+
+.housing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.housing-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.housing-avatar {
+    display: flex;
+    flex-direction: initial;
 }
 
 /* OTHER */
@@ -333,16 +347,6 @@ ul {
     list-style-type: none;
 }
 
-.d-flex {
-    display: flex;
-    position: relative;
-}
-
-.float-right {
-    float: right;
-}
-
 .w-2 {
     margin: 10px 0px 0px 0px;
-    width: 49%;
 }
