@@ -19,7 +19,7 @@ export const Housing = () => {
         if (!housing){
             navigate("/404", { replace: true });
         }
-    });
+    }, [housing, navigate]);
     if(!housing) return
 
     const firstName = housing.host.name.split(' ')[0]
